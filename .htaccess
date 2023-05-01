@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteRule ^auth/login$ views/auth/login.php [L]
+RewriteRule ^products/([^/]+)$ /views/products/$1.php [L]
+
+RewriteEngine On
+RewriteRule ^test$ test.php [L]
