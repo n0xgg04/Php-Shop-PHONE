@@ -1,0 +1,561 @@
+/* Phần thân trên*/
+* {
+    padding: 0; /* wonky workaround */
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #3e3e3f;
+    color: white;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: lightblue;
+}
+
+i {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+}
+
+div {
+    padding: 8px 0;
+}
+
+div > div {
+    padding: 6px 0;
+}
+
+input {
+  color: white;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 50px;
+  height: 70px;
+  align-items: center;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: black;
+  width: 100%;
+}
+header:hover {
+  background: black;
+}
+header.sticky {
+  background: black;
+}
+.logo {
+  flex: 1;
+  margin-left: -20px;
+  background-color: black;
+}
+.catename {
+  display: block;
+  overflow: hidden;
+  margin: 38px 0;
+  cursor: default;
+}
+.logo-category>img {
+  display: block;
+  margin: 0 auto;
+  width: auto;
+  height: 35px;
+}
+.menu {
+  flex: 3;
+  display: flex;
+  margin-left: 200px;
+  background-color: black;
+}
+.menu>li {
+  padding: 0 25px;
+  position: relative;
+  background-color: black;
+}
+.menu li a {
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+  line-height: 30px;
+  background-color: black;
+}
+.menu>li:hover .menu1 {
+  visibility: visible;
+  top: 50px;
+  background-color: black;
+}
+.menu1 {
+  position: absolute;
+  width: 105px;
+  border: 2px solid white;
+  padding: 10px 0px 10px 20px;
+  visibility: hidden;
+  top: 60px;
+  transition: 0.3s;
+  z-index: 1;
+  background: black;
+}
+.menu1 ul {
+  padding-left: 20px;
+}
+.menu1 li a {
+  font-weight: bold;
+  font-size: 15px;
+}
+.menu>li:hover .menu2 {
+  visibility: visible;
+  top: 50px;
+}
+.menu2 {
+  position: absolute;
+  width: 125px;
+  border: 2px solid white;
+  padding: 10px 0px 10px 20px;
+  visibility: hidden;
+  top: 60px;
+  transition: 0.3s;
+  z-index: 1;
+  background: black;
+}
+.menu2 ul {
+  padding-left: 20px;
+}
+.menu2 li a {
+  font-weight: bold;
+  font-size: 15px;
+}
+.menu>li:hover .menu3 {
+  visibility: visible;
+  top: 50px;
+}
+.menu3 {
+  position: absolute;
+  width: 100px;
+  border: 2px solid white;
+  padding: 10px 0px 10px 20px;
+  visibility: hidden;
+  top: 60px;
+  transition: 0.3s;
+  z-index: 1;
+  background: black;
+}
+.menu3 ul {
+  padding-left: 20px;
+}
+.menu3 li a {
+  font-weight: bold;
+  font-size: 15px;
+}
+.menu>li:hover .menu4 {
+  visibility: visible;
+  top: 50px;
+}
+.menu4 {
+  position: absolute;
+  width: 180px;
+  border: 2px solid white;
+  padding: 10px 0px 10px 20px;
+  visibility: hidden;
+  top: 60px;
+  transition: 0.3s;
+  z-index: 1;
+  background: black;
+}
+.menu4 ul {
+  padding-left: 20px;
+}
+.menu4 li a {
+  font-weight: bold;
+  font-size: 15px;
+}
+.menu>li:hover .menu5 {
+  visibility: visible;
+  top: 50px;
+}
+.menu5 {
+  position: absolute;
+  width: 140px;
+  border: 2px solid white;
+  padding: 10px 0px 10px 20px;
+  visibility: hidden;
+  top: 60px;
+  transition: 0.3s;
+  z-index: 1;
+  background: black;
+}
+.menu5 ul {
+  padding-left: 20px;
+}
+.menu5 li a {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.menu>li:hover .menu6 {
+  visibility: visible;
+  top: 50px;
+}
+
+.menu6 {
+  position: absolute;
+  width: 105px;
+  border: 2px solid white;
+  padding: 10px 0px 10px 20px;
+  visibility: hidden;
+  top: 60px;
+  transition: 0.3s;
+  z-index: 1;
+  background: black;
+}
+
+.menu6 ul {
+  padding-left: 20px;
+}
+
+.menu6 li a {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.others {
+  flex: 1;
+  display: flex;
+  background-color: black;
+}
+
+.others>li {
+  padding: 0 12px;
+  position: relative;
+  background-color: black;
+}
+
+.others>li::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 50%;
+  background: #dddddd;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.others>li:last-child::after {
+  display: none;
+}
+
+.others>li:first-child {
+  position: relative;
+  background-color: black;
+}
+
+.others>li:first-child input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid white;
+  background: transparent;
+  outline: none;
+}
+
+.others>li:first-child i {
+  position: absolute;
+  right: 10px;
+}
+
+.others input::placeholder {
+  font-size: 13px;
+}
+/*Phần hình ảnh*/
+.intro-detail {
+  background: #3e3e3f;
+  min-height: 805px;
+  display: flex;
+}
+.intro-detail .center-page {
+  justify-content: space-between;
+  align-items: stretch;
+  min-width: 800px;
+  max-width: 800px;
+}
+#slider-detail {
+  width: 600px;
+  margin-right: 20px;
+  position: sticky;
+  top: 15px;
+  padding-bottom: 110px;
+ 
+}
+.intro-detail aside:last-child {
+  width: 550px;
+}
+.intro-detail aside {
+  float: left;
+  margin: 73px 0 40px; /* trên phải dưới trái*/
+  position: relative;
+}
+/*Phần thông tin*/
+h1 {
+  display: block;
+  padding: 0 0 20px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+  padding-top: 5px;
+  line-height: 1.2;
+  position: relative;/*tương đối ,không bị phụ thuộc vào đối tượng nào khác
+  nó sẽ lấy chính vị trí đang đứng của nó làm gốc tọa độ  , thay đổi vị trí chỉ khi có top left right bottom và chỉ hoạt động 
+  khi đã có position*/
+}
+
+.price-promo-local span {
+  display: inline-block;
+  overflow: hidden;
+  color: #fff;
+  font-size: 15px;
+  line-height: 20px;
+  cursor: pointer;
+  padding-right: 15px;
+}
+.price {
+  display: flex;
+  font-size: 26px;
+  color: #fff;
+  padding: 0 0 20px;
+  align-items: center;
+}
+.price strike {
+  padding: 0 10px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+}
+.capacity {
+  display: block;
+  overflow: hidden;
+  margin: 0 0 20px;
+}
+.capacity span {
+  color: #fff;
+  font-size: 15px;
+  line-height: 20px;
+  margin: 0 0 10px;
+}
+.capacity ul {
+  margin: 0 18px 0 0;
+}
+
+.capacity ul li {
+    display: inline;
+}
+
+.capacity ul li a {
+    display: inline-block;
+    text-decoration: none;
+  color: #dbdbdb;
+  background: #2f3033;
+  border-radius: 8px;
+  padding: 10px 12px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 21px;
+  border: 1px solid transparent;
+}
+/*chỉnh thanh màu*/
+.color-sp ul li a {
+  width: 40px;
+  height: 40px;
+  display: block;
+  overflow: hidden;
+  border-radius: 100%;
+  box-shadow: inset 0 3px 4px rgba(0,0,0,.25);
+  background: #123e61;
+  position: relative;
+}
+.color-sp span {
+  display: block;
+  overflow: hidden;
+  font-size: 15px;
+  line-height: 20px;
+  color: #fff;
+  padding: 0 0 10px;
+}
+.color-sp ul {
+  display: block;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.color-sp ul li {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 18px 0 0;
+  border-radius: 100%;
+  border: 2px solid transparent;
+}
+
+#promotion-detail{
+  border: #2f3033 solid;
+  padding: 20px 15px 10px 15px;
+  border-radius: 12px;
+  margin: 0 0 20px;
+}
+
+.box-promo span {
+  display: block;
+  overflow: hidden;
+  font-size: 15px;
+  line-height: 20px;
+  color: #fff;
+  padding: 0 5px 6px;
+  font-weight: bold;
+}
+.box-promo small {
+  display: block;
+  overflow: hidden;
+  font-size: 13px;
+  line-height: 18px;
+  color: #fff;
+  border-bottom: 1px solid #414141;
+  padding: 0 5px 13px;
+  margin: 0 0 16px;
+}
+.box-promo .content-promo p b {
+  font-size: 14px;
+  line-height: 21px;
+  display: inline-block;
+  vertical-align: top;
+  width: calc(100% - 20px);
+  font-weight: 400;
+  
+}
+.box-promo .content-promo p b span {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.4;
+  padding: 3px 0 0 0;
+}
+.box-promo .content-promo p b a {
+  display: inline;
+  color: #2997ff;
+}
+/* Phần nút mua ngay*/
+.buy-sp.has-threebtn {
+  display: block;
+}
+.buy-sp .btn-buy.full {
+  margin: 0 0 10px;
+}
+.buy-sp a.full {
+  width: 100%;
+  margin-right: 0;
+}
+.buy-sp a {
+  float: left;
+  width: 50%;
+  margin-right: 20px;
+  font-size: 20px;
+  line-height: 25px;
+  color: #fff;
+  border-radius: 12px;
+  text-align: center;
+  padding: 18px 0;
+  background: #0071e3;
+  font-weight: 700;
+}
+.buy-sp .btn-ins.pay-taichinh, .buy-sp .btn-ins.pay-nganluong {
+  float: left;
+  color: #101010;
+  background: #fff;
+  font-size: 16px;
+  padding: 10px 0;
+  margin-right: 0;
+  margin-bottom: 30px;
+}
+.buy-sp .btn-ins span {
+  font-size: 14px;
+  font-weight: 400;
+  display: block;
+  line-height: 1.1;
+  background: white;
+}
+.buy-sp .btn-ins.has-another-pay {
+  width: 49%;
+}
+.buy-sp .btn-ins.pay-nganluong {
+  float: right;
+  margin-right: 0;
+}
+.policy {
+  display: block;
+  overflow: hidden;
+}
+.policy li {
+  display: block;
+  overflow: hidden;
+  margin: 0 0 12px;
+}
+.policy li span {
+  display: block;
+  overflow: hidden;
+  font-size: 15px;
+  line-height: 20px;
+  color: #fff;
+}
+.policy li span i {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 8px 0 0;
+  width: 22px;
+}
+.topzone-boxtskt {
+  width: 24px;
+  height: 24px;
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAJcEhZcwAAFiUAABYlAUlSJPAAAABFUExURUdwTP///////////////////////////////////////////////////////////////////////////////////////1fUNLcAAAAWdFJOUwCfQD8Qv2Df719vjyB/gE8wUM+vH3CEv/pOAAABMklEQVRIx+2WyxaDIAxEAUFAUVFb/v9TS0FAIL7WbZaeuSaDnIkIgUXJjB4U6YUx5JHa1nRLrUbu1KJvbqhpx7yaNXTfUqoztWEdrQZkkpaHwvzgbMjUo3/6LTzXNsWwH5yO24C49744Jt6mAGymAd0wDQ6MQot/S6ZuATsT9o8QLy0RDNkJLbkFOLq0E1qWwBuys2/Jc0DXdoqWBUBsRwl9h9iyBjDwHdZ0UU6AFrwox8AMqGtAJ6D92nxVN7QA7KnJBEjgShcAUho9A1L9gT/wq4BZ5S3ApSUPYUwuADr7GFmQikmuj4GQlqJ32yumf6cgIKblPkS39LfJr3IgrFXDpnLNhaxzR+CBg0WZUqZdtt7EAl1UD/RksQ/cZJVvFrA0jsy9/wF3bKLaLFc1yYPBP9RfKsV95xMDAAAAAElFTkSuQmCC) no-repeat center top;
+  background-size: 24px 24px;
+}
+.topzone-doitra {
+  width: 24px;
+  height: 24px;
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAJcEhZcwAAFiUAABYlAUlSJPAAAABFUExURUdwTP///////////////////////////////////////////////////////////////////////////////////////1fUNLcAAAAWdFJOUwCfQD8Qv2Df719vjyB/gE8wUM+vH3CEv/pOAAABMklEQVRIx+2WyxaDIAxEAUFAUVFb/v9TS0FAIL7WbZaeuSaDnIkIgUXJjB4U6YUx5JHa1nRLrUbu1KJvbqhpx7yaNXTfUqoztWEdrQZkkpaHwvzgbMjUo3/6LTzXNsWwH5yO24C49744Jt6mAGymAd0wDQ6MQot/S6ZuATsT9o8QLy0RDNkJLbkFOLq0E1qWwBuys2/Jc0DXdoqWBUBsRwl9h9iyBjDwHdZ0UU6AFrwox8AMqGtAJ6D92nxVN7QA7KnJBEjgShcAUho9A1L9gT/wq4BZ5S3ApSUPYUwuADr7GFmQikmuj4GQlqJ32yumf6cgIKblPkS39LfJr3IgrFXDpnLNhaxzR+CBg0WZUqZdtt7EAl1UD/RksQ/cZJVvFrA0jsy9/wF3bKLaLFc1yYPBP9RfKsV95xMDAAAAAElFTkSuQmCC) no-repeat center top;
+  background-size: 24px 24px;
+  
+}
+
+.topzone-baohanhpolicy{
+  width: 24px;
+  height: 24px;
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAJcEhZcwAAFiUAABYlAUlSJPAAAABFUExURUdwTP///////////////////////////////////////////////////////////////////////////////////////1fUNLcAAAAWdFJOUwCfQD8Qv2Df719vjyB/gE8wUM+vH3CEv/pOAAABMklEQVRIx+2WyxaDIAxEAUFAUVFb/v9TS0FAIL7WbZaeuSaDnIkIgUXJjB4U6YUx5JHa1nRLrUbu1KJvbqhpx7yaNXTfUqoztWEdrQZkkpaHwvzgbMjUo3/6LTzXNsWwH5yO24C49744Jt6mAGymAd0wDQ6MQot/S6ZuATsT9o8QLy0RDNkJLbkFOLq0E1qWwBuys2/Jc0DXdoqWBUBsRwl9h9iyBjDwHdZ0UU6AFrwox8AMqGtAJ6D92nxVN7QA7KnJBEjgShcAUho9A1L9gT/wq4BZ5S3ApSUPYUwuADr7GFmQikmuj4GQlqJ32yumf6cgIKblPkS39LfJr3IgrFXDpnLNhaxzR+CBg0WZUqZdtt7EAl1UD/RksQ/cZJVvFrA0jsy9/wF3bKLaLFc1yYPBP9RfKsV95xMDAAAAAElFTkSuQmCC) no-repeat center top;
+  background-size: 24px 24px;
+}
+.topzone-giaohang{
+  width: 24px;
+  height: 24px;
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAJcEhZcwAAFiUAABYlAUlSJPAAAABFUExURUdwTP///////////////////////////////////////////////////////////////////////////////////////1fUNLcAAAAWdFJOUwCfQD8Qv2Df719vjyB/gE8wUM+vH3CEv/pOAAABMklEQVRIx+2WyxaDIAxEAUFAUVFb/v9TS0FAIL7WbZaeuSaDnIkIgUXJjB4U6YUx5JHa1nRLrUbu1KJvbqhpx7yaNXTfUqoztWEdrQZkkpaHwvzgbMjUo3/6LTzXNsWwH5yO24C49744Jt6mAGymAd0wDQ6MQot/S6ZuATsT9o8QLy0RDNkJLbkFOLq0E1qWwBuys2/Jc0DXdoqWBUBsRwl9h9iyBjDwHdZ0UU6AFrwox8AMqGtAJ6D92nxVN7QA7KnJBEjgShcAUho9A1L9gT/wq4BZ5S3ApSUPYUwuADr7GFmQikmuj4GQlqJ32yumf6cgIKblPkS39LfJr3IgrFXDpnLNhaxzR+CBg0WZUqZdtt7EAl1UD/RksQ/cZJVvFrA0jsy9/wF3bKLaLFc1yYPBP9RfKsV95xMDAAAAAElFTkSuQmCC) no-repeat center top;
+  background-size: 24px 24px;
+}
+.topzone-tongdai{
+  width: 24px;
+  height: 24px;
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAJcEhZcwAAFiUAABYlAUlSJPAAAABFUExURUdwTP///////////////////////////////////////////////////////////////////////////////////////1fUNLcAAAAWdFJOUwCfQD8Qv2Df719vjyB/gE8wUM+vH3CEv/pOAAABMklEQVRIx+2WyxaDIAxEAUFAUVFb/v9TS0FAIL7WbZaeuSaDnIkIgUXJjB4U6YUx5JHa1nRLrUbu1KJvbqhpx7yaNXTfUqoztWEdrQZkkpaHwvzgbMjUo3/6LTzXNsWwH5yO24C49744Jt6mAGymAd0wDQ6MQot/S6ZuATsT9o8QLy0RDNkJLbkFOLq0E1qWwBuys2/Jc0DXdoqWBUBsRwl9h9iyBjDwHdZ0UU6AFrwox8AMqGtAJ6D92nxVN7QA7KnJBEjgShcAUho9A1L9gT/wq4BZ5S3ApSUPYUwuADr7GFmQikmuj4GQlqJ32yumf6cgIKblPkS39LfJr3IgrFXDpnLNhaxzR+CBg0WZUqZdtt7EAl1UD/RksQ/cZJVvFrA0jsy9/wF3bKLaLFc1yYPBP9RfKsV95xMDAAAAAElFTkSuQmCC) no-repeat center top;
+  background-size: 24px 24px;
+}
+.img-daidien{
+  width: 30px;
+}
+.update-price {
+
+  font-weight: 400;
+  padding: 0 10px;
+  text-decoration: line-through;
+  font-size: 18px;
+}

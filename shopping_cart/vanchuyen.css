@@ -1,0 +1,279 @@
+:root {
+    --main-text-font: Arial, Helvetica, sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(62, 62, 63);
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+i {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+}
+input {
+    color: white;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 50px;
+    height: 70px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: black;
+    width: 100%;
+}
+header:hover {
+    background: black;
+}
+header.sticky {
+    background: black;
+}
+.logo {
+    flex: 1;
+    margin-left: -20px;
+    background-color: black;
+}
+.catename {
+    display: block;
+    overflow: hidden;
+    margin: 38px 0;
+    cursor: default;
+}
+.logo-category>img {
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    height: 35px;
+}
+.menu {
+    flex: 3;
+    display: flex;
+    margin-left: 200px;
+    background-color: black;
+}
+.menu > li {
+    padding: 0 25px;
+    position: relative;
+    background-color: black;
+}
+.menu li a {
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    line-height: 30px;
+    background-color: black;
+}
+.menu > li:hover .menu1{
+    visibility: visible;
+    top: 50px;
+    background-color: black;
+}
+.menu1 {
+    position: absolute;
+    width: 105px;
+    border: 2px solid white;
+    padding: 10px 0px 10px 20px;
+    visibility: hidden;
+    top: 60px;
+    transition: 0.3s;
+    z-index: 1;
+    background: black;
+}
+.menu1 ul {
+    padding-left: 20px;
+}
+.menu1 li a {
+    font-weight: bold;
+    font-size: 15px;
+}
+.menu > li:hover .menu2{
+    visibility: visible;
+    top: 50px;
+}
+.menu2 {
+    position: absolute;
+    width: 125px;
+    border: 2px solid white;
+    padding: 10px 0px 10px 20px;
+    visibility: hidden;
+    top: 60px;
+    transition: 0.3s;
+    z-index: 1;
+    background: black;
+}
+.menu2 ul {
+    padding-left: 20px;
+}
+.menu2 li a {
+    font-weight: bold;
+    font-size: 15px;
+}
+.menu > li:hover .menu3{
+    visibility: visible;
+    top: 50px;
+}
+.menu3 {
+    position: absolute;
+    width: 100px;
+    border: 2px solid white;
+    padding: 10px 0px 10px 20px;
+    visibility: hidden;
+    top: 60px;
+    transition: 0.3s;
+    z-index: 1;
+    background: black;
+}
+.menu3 ul {
+    padding-left: 20px;
+}
+.menu3 li a {
+    font-weight: bold;
+    font-size: 15px;
+}
+.menu > li:hover .menu4{
+    visibility: visible;
+    top: 50px;
+}
+.menu4 {
+    position: absolute;
+    width: 180px;
+    border: 2px solid white;
+    padding: 10px 0px 10px 20px;
+    visibility: hidden;
+    top: 60px;
+    transition: 0.3s;
+    z-index: 1;
+    background: black;
+}
+.menu4 ul {
+    padding-left: 20px;
+}
+.menu4 li a {
+    font-weight: bold;
+    font-size: 15px;
+}
+.menu > li:hover .menu5{
+    visibility: visible;
+    top: 50px;
+}
+.menu5 {
+    position: absolute;
+    width: 140px;
+    border: 2px solid white;
+    padding: 10px 0px 10px 20px;
+    visibility: hidden;
+    top: 60px;
+    transition: 0.3s;
+    z-index: 1;
+    background: black;
+}
+.menu5 ul {
+    padding-left: 20px;
+}
+.menu5 li a {
+    font-weight: bold;
+    font-size: 15px;
+}
+.menu > li:hover .menu6{
+    visibility: visible;
+    top: 50px;
+}
+.menu6 {
+    position: absolute;
+    width: 105px;
+    border: 2px solid white;
+    padding: 10px 0px 10px 20px;
+    visibility: hidden;
+    top: 60px;
+    transition: 0.3s;
+    z-index: 1;
+    background: black;
+}
+.menu6 ul {
+    padding-left: 20px;
+}
+.menu6 li a {
+    font-weight: bold;
+    font-size: 15px;
+}
+.others {
+    flex: 1;
+    display: flex;
+}
+.others > li{
+    padding: 0 12px;
+    position: relative;
+    background-color: black;
+}
+.others > li::after {
+    content:"";
+    display: block;
+    width: 1px;
+    height: 50%;
+    background: #dddddd;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.others > li:last-child::after {
+    display: none;
+}
+.others > li:first-child {
+    position: relative;
+    background-color: black;
+}
+.others > li:first-child input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid white;  
+    background: transparent;
+    outline: none;
+}
+.others > li:first-child i {
+    position: absolute;
+    right: 10px;
+}
+.others input::placeholder {
+    font-size: 13px;
+}
+
+h4 {
+    margin-top: 7%;
+    font-size: 30px;
+    color: white;
+    margin-left: 41%;
+}
+
+.col-md-12 {
+    margin-top: 5%;
+    margin-left: 40%;
+    border: 1px solid white;
+    width: 25%;
+}
+
+.form-group {
+    color: white;
+    font-size: 20px;
+    margin-left: 5%;
+}
+
+input {
+    margin-left: 10%;
+}
+.infor {
+    display: block;
+}
