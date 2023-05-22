@@ -30,6 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				echo "<script>alert('Đăng nhập thành công')</script>";
 				// Thay đổi thành sử dụng session để lưu thông tin đăng nhập
 				$_SESSION['email'] = $email;
+				$_SESSION['username'] = $email;
 				header('Location: ' . _WEB_URL);
 			} else {
 				echo "<script>alert('Vui lòng xác thực email')</script>";

@@ -26,90 +26,40 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['BuyNow'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="detail.css">
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="/chitietsanpham/detail.css">
+    <link rel="stylesheet" href="/chitietsanpham/style.css">
+    <link rel="stylesheet" href="/chitietsanpham/cart.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+        .cartPayment{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          align-items: center;
+          }
 
+            .cart-footer_right{
+              box-sizing: border-box;
+            }
+          .cart-footer_right button{
+            font-size: 15px;
+            cursor: pointer;
+            width: 120px;
+            border: none;
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 10px 7px;
+          }
+
+          input[type="number"]{
+            color: #000000;
+          }
+
+    </style>
 </head>
 
 <body>
-    <!-- Phần thân trên -->
-    <header>
-        <div class="logo">
-            <a href="/index.php">
-                <img src="../img/MR.LEE.png" style="width: 100px; height: 50px; float: left"></img>
-            </a>
-        </div>
-
-        <div class="menu">
-            <li><a href="/products/iphone/iphone.php">iPhone</a>
-                <ul class="menu1">
-                    <li><a href="../products/iphone/iphone_phanloai.php?phanloai=1">iPhone 14</a></li>
-                    <li><a href="../products/iphone/iphone_phanloai.php?phanloai=2">iPhone 13</a></li>
-                    <li><a href="../products/iphone/iphone_phanloai.php?phanloai=3">iPhone 12</a></li>
-                    <li><a href="../products/iphone/iphone_phanloai.php?phanloai=4">iPhone 11</a></li>
-                    <li><a href="../products/iphone/iphone_phanloai.php?phanloai=5">iPhone SE</a></li>
-                </ul>
-            </li>
-            <li><a href="/products/mac/mac.php">Mac</a>
-                <ul class="menu2">
-                    <li><a href="/products/mac/mac_phanloai.php?phanloai=6">Macbook Air</a></li>
-                    <li><a href="/products/mac/mac_phanloai.php?phanloai=7">Macbook Pro</a></li>
-                </ul>
-            </li>
-            <li><a href="/products/ipad/ipad.php">iPad</a>
-                <ul class="menu3">
-                    <li><a href="/products/ipad/ipad_phanloai.php?phanloai=8">iPad Gen</a></li>
-                    <li><a href="/products/ipad/ipad_phanloai.php?phanloai=9">iPad Pro</a></li>
-                    <li><a href="/products/ipad/ipad_phanloai.php?phanloai=10">iPad Air</a></li>
-                </ul>
-            </li>
-            <li><a href="/products/watch/watch.php">Watch</a>
-                <ul class="menu4">
-                    <li><a href="/products/watch/watch_phanloai.php?phanloai=11">Apple Watch Series 7</a></li>
-                    <li><a href="/products/watch/watch_phanloai.php?phanloai=12">Apple Watch Series 8</a></li>
-                    <li><a href="/products/watch/watch_phanloai.php?phanloai=13">Apple Watch Ultra</a></li>
-                </ul>
-            </li>
-            <li><a href="/products/homepod/homepod.php">HomePod</a>
-                <ul class="menu5">
-                    <li><a href="/products/homepod/homepod_phanloai.php?phanloai=14">HomePod Mini</a></li>
-                    <li><a href="/products/homepod/homepod_phanloai.php?phanloai=15">HomePod</a></li>
-                </ul>
-            </li>
-            <li><a href="/products/phukien/phukien.php">Phụ kiện</a>
-                <ul class="menu6">
-                    <li><a href="/products/phukien/phukien_phanloai.php?phanloai=16">Airpods</a></li>
-                    <li><a href="/products/phukien/phukien_phanloai.php?phanloai=17">Airtags</a></li>
-                    <li><a href="/products/phukien/phukien_phanloai.php?phanloai=22">Magsafe</a></li>
-                    <li><a href="/products/phukien/phukien_phanloai.php?phanloai=18">Case</a></li>
-                    <li><a href="/products/phukien/phukien_phanloai.php?phanloai=19">Keyboard</a></li>
-                </ul>
-            </li>
-        </div>
-        <div class="others">
-            <li><input placeholder="Tìm kiếm" type="text"><i class="fas fa-search"></i></li>
-            <li class="cart-li"><span class="fa fa-shopping-bag"></span>
-                <div class="cart">
-                       <div class="cart-header">
-                            <span>Giỏ hàng</span>
-                       </div>
-                       <div class="cart-list">
-
-                       </div>
-                       <div class="cart-footer">
-                       
-                       </div>
-                 </div>
-            </li>
-
-            <li><a class="fa fa-user" href="/account/login.php"></a></li>
-        </div>
-
-        </div>
-
-    </header>
+    <?php include $_SERVER['DOCUMENT_ROOT']."/layouts/header.php"; ?>
 
     <?php
     if($_GET['proid'] != ''){
@@ -338,7 +288,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['BuyNow'])) {
             </div>
         </aside>
     </div>
-    <script src="cart.js"></script>
+    <?php include $_SERVER['DOCUMENT_ROOT'].'/layouts/footer.php'; ?>
 </body>
 
 </html>
